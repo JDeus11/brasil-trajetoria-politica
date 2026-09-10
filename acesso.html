@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seu acesso — Brasil: Trajetória Política</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;0,700;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B2A5B;
+    --ink-soft:rgba(11,42,91,0.66);
+    --paper:#FAF7EC;
+    --paper-2:#FFFFFF;
+    --stamp:#0E8A43;
+    --brass:#B8860B;
+    --line:rgba(11,42,91,0.14);
+    --maxw:880px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:'IBM Plex Sans',sans-serif; line-height:1.55;
+  }
+  h1,h2,h3,.serif{ font-family:'Newsreader',serif; }
+  .mono{ font-family:'IBM Plex Mono',monospace; letter-spacing:.03em; }
+  a{ color:inherit; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+
+  .topbar{
+    background:var(--ink); color:var(--paper);
+    padding:14px 0; font-size:13px;
+  }
+  .topbar .wrap{ display:flex; justify-content:space-between; align-items:center; }
+  .topbar .brand{ font-family:'Newsreader',serif; font-style:italic; font-size:16px; }
+
+  .confirm{
+    padding:56px 0 36px; text-align:center;
+    border-bottom:1px solid var(--line);
+  }
+  .badge{
+    display:inline-flex; align-items:center; gap:8px;
+    background:rgba(14,138,67,0.1); color:var(--stamp);
+    border:1px solid rgba(14,138,67,0.35);
+    border-radius:999px; padding:6px 16px;
+    font-size:13px; font-weight:500; margin-bottom:20px;
+  }
+  .badge .dot{ width:7px; height:7px; border-radius:50%; background:var(--stamp); }
+  .confirm h1{ font-size:34px; margin:0 0 12px; font-weight:600; }
+  .confirm p{ color:var(--ink-soft); font-size:16px; max-width:52ch; margin:0 auto; }
+  .order-meta{
+    margin-top:24px; display:inline-flex; gap:24px; flex-wrap:wrap;
+    justify-content:center; font-size:13px; color:var(--ink-soft);
+  }
+  .order-meta span.mono{ color:var(--ink); }
+
+  section.block{ padding:44px 0; border-bottom:1px solid var(--line); }
+  .block-head{ display:flex; align-items:baseline; justify-content:space-between; margin-bottom:22px; gap:12px; flex-wrap:wrap; }
+  .block-head h2{ font-size:24px; margin:0; font-weight:600; }
+  .block-head .tag{ font-size:12px; color:var(--ink-soft); }
+
+  .book-card{
+    display:flex; gap:22px; align-items:center;
+    background:var(--paper-2); border:1px solid var(--line);
+    border-radius:10px; padding:22px;
+  }
+  .book-cover{
+    width:64px; height:86px; flex-shrink:0; border-radius:3px;
+    background:linear-gradient(160deg, var(--ink), #163a6e);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--paper); font-family:'Newsreader',serif; font-style:italic; font-size:11px;
+    text-align:center; padding:6px; line-height:1.2;
+    box-shadow: 3px 3px 0 rgba(11,42,91,0.12);
+  }
+  .book-info{ flex:1; min-width:0; }
+  .book-info h3{ margin:0 0 4px; font-size:18px; font-weight:600; }
+  .book-info p{ margin:0; font-size:13.5px; color:var(--ink-soft); }
+  .dl-btn{
+    flex-shrink:0; display:inline-flex; align-items:center; gap:8px;
+    background:var(--ink); color:var(--paper);
+    padding:11px 20px; border-radius:7px; text-decoration:none;
+    font-size:14px; font-weight:500; white-space:nowrap;
+    transition:opacity .15s;
+  }
+  .dl-btn:hover{ opacity:0.85; }
+
+  .chapters{ display:grid; gap:12px; }
+  .chapter-row{
+    display:flex; align-items:center; gap:16px;
+    background:var(--paper-2); border:1px solid var(--line);
+    border-radius:10px; padding:16px 18px;
+  }
+  .ch-num{
+    width:38px; height:38px; border-radius:50%; flex-shrink:0;
+    background:var(--paper); border:1.5px solid var(--brass); color:var(--brass);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Newsreader',serif; font-weight:600; font-size:16px;
+  }
+  .ch-info{ flex:1; min-width:0; }
+  .ch-info h4{ margin:0 0 2px; font-size:15.5px; font-weight:600; }
+  .ch-info p{ margin:0; font-size:12.5px; color:var(--ink-soft); }
+  .watch-btn{
+    flex-shrink:0; display:inline-flex; align-items:center; gap:6px;
+    background:transparent; color:var(--stamp); border:1.5px solid var(--stamp);
+    padding:9px 16px; border-radius:7px; text-decoration:none;
+    font-size:13.5px; font-weight:500; white-space:nowrap;
+    transition:background .15s, color .15s;
+  }
+  .watch-btn:hover{ background:var(--stamp); color:#fff; }
+  .final-tag{
+    display:inline-block; margin-left:8px; font-size:10.5px;
+    background:rgba(184,134,11,0.12); color:var(--brass);
+    border-radius:4px; padding:2px 7px; vertical-align:middle;
+  }
+
+  .howto{
+    background:rgba(11,42,91,0.04); border:1px dashed var(--line);
+    border-radius:10px; padding:20px 22px; font-size:14px; color:var(--ink-soft);
+  }
+  .howto strong{ color:var(--ink); }
+  .howto ul{ margin:10px 0 0; padding-left:20px; }
+  .howto li{ margin-bottom:6px; }
+
+  footer{ padding:36px 0 56px; text-align:center; }
+  footer p{ font-size:13px; color:var(--ink-soft); margin:4px 0; }
+  footer a{ color:var(--ink); text-decoration:underline; }
+
+  @media (max-width:600px){
+    .confirm h1{ font-size:26px; }
+    .book-card{ flex-direction:column; align-items:flex-start; text-align:left; }
+    .dl-btn{ width:100%; justify-content:center; }
+    .chapter-row{ flex-wrap:wrap; }
+    .watch-btn{ width:100%; justify-content:center; order:3; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="brand">Brasil: Trajetória Política</span>
+    <span class="mono">ÁREA DO ALUNO</span>
+  </div>
+</div>
+
+<div class="confirm">
+  <div class="wrap">
+    <span class="badge"><span class="dot"></span> Pagamento confirmado</span>
+    <h1>Seu material já está liberado.</h1>
+    <p>Obrigado pela compra. O livro completo e os 5 episódios da série estão disponíveis abaixo — acesso imediato, sem prazo de expiração.</p>
+    <div class="order-meta">
+      <span>Pedido <span class="mono">#BR-2026-084213</span></span>
+      <span>Recebido em <span class="mono">09/09/2026</span></span>
+      <span>E-mail de acesso enviado a <span class="mono">seuemail@exemplo.com</span></span>
+    </div>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head">
+      <h2>O livro</h2>
+      <span class="tag">5 capítulos · bibliografia incluída</span>
+    </div>
+    <div class="book-card">
+      <div class="book-cover">Brasil<br>Trajetória<br>Política</div>
+      <div class="book-info">
+        <h3>Brasil: Trajetória Política</h3>
+        <p>Formato .docx — abre em Word, Google Docs ou qualquer leitor compatível. Leitura corrida, mais densa que os vídeos.</p>
+      </div>
+      <a class="dl-btn" href="livro-trajetoria-politica-brasileira.docx" download>↓ Baixar o livro</a>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="block-head">
+      <h2>Série em vídeo</h2>
+      <span class="tag">5 episódios · assista na ordem ou pule direto ao seu período</span>
+    </div>
+    <div class="chapters">
+      <div class="chapter-row">
+        <div class="ch-num">1</div>
+        <div class="ch-info"><h4>Das Origens à República Velha</h4><p>1822 — a Independência até o fim da República Velha, em 1930</p></div>
+        <a class="watch-btn" href="capitulo-1-narrado.html">▸ Assistir</a>
+      </div>
+      <div class="chapter-row">
+        <div class="ch-num">2</div>
+        <div class="ch-info"><h4>A Era Vargas e a Democracia Populista</h4><p>1930 — de Vargas ao limiar de 1964</p></div>
+        <a class="watch-btn" href="capitulo-2-narrado.html">▸ Assistir</a>
+      </div>
+      <div class="chapter-row">
+        <div class="ch-num">3</div>
+        <div class="ch-info"><h4>A Ditadura Militar</h4><p>1964–1985 — o regime, a repressão e a abertura</p></div>
+        <a class="watch-btn" href="capitulo-3-narrado.html">▸ Assistir</a>
+      </div>
+      <div class="chapter-row">
+        <div class="ch-num">4</div>
+        <div class="ch-info"><h4>Nova República ao Impeachment de Dilma</h4><p>1985–2016 — Sarney a Dilma</p></div>
+        <a class="watch-btn" href="capitulo-4-narrado.html">▸ Assistir</a>
+      </div>
+      <div class="chapter-row">
+        <div class="ch-num">5</div>
+        <div class="ch-info"><h4>Brasil Contemporâneo <span class="final-tag">atualizado após a eleição</span></h4><p>2016–2026 — de Temer às eleições de outubro</p></div>
+        <a class="watch-btn" href="capitulo-5-narrado.html">▸ Assistir</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="howto">
+      <strong>Como assistir:</strong> cada episódio abre direto no navegador, sem precisar baixar nada.
+      <ul>
+        <li>Toque em play para começar a narração; as legendas acompanham a fala.</li>
+        <li>Se o navegador perguntar por permissão de áudio/voz, aceite — é a narração do próprio navegador.</li>
+        <li>Depois de a página carregar uma vez, ela continua funcionando mesmo sem internet.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Guardou o e-mail de confirmação? Ele tem este mesmo link, caso precise acessar de outro aparelho.</p>
+    <p>Dúvidas sobre o conteúdo ou problema de acesso: <a href="#">responda o e-mail de confirmação</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
