@@ -33,22 +33,28 @@
   .upsell{
     margin-top:36px;
     max-width:360px;
-    background:rgba(250,247,238,0.06);
-    border:1px solid rgba(250,247,238,0.24);
+    background:#FFDF00;
     border-radius:14px;
-    padding:22px 22px;
+    padding:24px 22px;
+    text-align:left;
   }
   .upsell .eyebrow2{
-    font-family:'Courier New',monospace; font-size:11px; letter-spacing:.1em;
-    color: var(--brass); text-transform:uppercase; margin-bottom:10px; display:block;
+    font-family:'Courier New',monospace; font-size:11px; letter-spacing:.1em; font-weight:700;
+    color: var(--ink); text-transform:uppercase; margin-bottom:10px; display:block;
   }
   .upsell p{
-    font-size:15px; line-height:1.55; color: var(--paper); margin-bottom:14px;
+    font-size:15px; line-height:1.55; color: var(--ink); margin-bottom:16px;
   }
-  .upsell p b{ color: var(--brass); }
-  .upsell a{
-    font-size:14px; font-weight:700; color: var(--paper);
-    text-decoration:none; border-bottom:1.5px solid var(--brass);
+  .upsell p b{ color: var(--ink); }
+  .upsell .features{ list-style:none; padding:0; margin:0 0 18px; }
+  .upsell .features li{ font-size:13.5px; color:var(--ink); padding:4px 0; }
+  .upsell .price-row{ margin-bottom:18px; }
+  .upsell .old{ font-size:14px; color:rgba(11,42,91,0.55); text-decoration:line-through; margin-right:8px; }
+  .upsell .new{ font-size:24px; font-weight:700; color:var(--ink); }
+  .upsell .tag{ display:block; font-size:11.5px; color:rgba(11,42,91,0.7); margin-top:4px; }
+  .upsell a.cta2{
+    display:inline-block; font-size:14px; font-weight:700; color: var(--paper);
+    background: var(--ink); text-decoration:none; padding:12px 20px; border-radius:100px;
   }
 </style>
 </head>
@@ -60,9 +66,19 @@
     <div class="p">Obrigado pela confiança. Os 5 fatos que explicam a eleição 2026 — sem viés — estão no livro abaixo.</div>
     <a class="cta" href="https://jdeus11.github.io/brasil-trajetoria-politica/isca-eleicao-2026.pdf" target="_top">Baixar meu livro →</a>
     <div class="upsell">
-      <span class="eyebrow2">Antes de ir embora</span>
-      <p>Isso foi só o último capítulo de uma história de 200 anos. Por mais <b>R$ 49,90</b> você conhece a verdadeira história da política brasileira — da Independência até 2026, sem escolher lado.</p>
-      <a href="https://jdeus11.github.io/brasil-trajetoria-politica/">Conhecer o livro completo →</a>
+      <span class="eyebrow2">A história completa</span>
+      <p>Isso foi só o capítulo final de uma história de <b>200 anos</b>. <b>Brasil: Trajetória Política</b> é o livro + série documental que leva você da Independência ao golpe de 64, da redemocratização ao impeachment de Dilma, dos processos de Lula e Bolsonaro até a eleição de 2026 — sempre com as duas leituras, sem escolher lado.</p>
+      <ul class="features">
+        <li>📖 Livro digital completo — 5 capítulos</li>
+        <li>🎬 Série em vídeo — 5 episódios</li>
+        <li>📚 Bibliografia comentada</li>
+        <li>🗳️ Panorama da eleição de 2026</li>
+      </ul>
+      <div class="price-row">
+        <span class="old">R$ 49,90</span><span class="new">R$ 39,90</span>
+        <span class="tag">Desconto exclusivo por já ter garantido a isca</span>
+      </div>
+      <a class="cta2" href="https://jdeus11.github.io/brasil-trajetoria-politica/?oferta=isca">Conhecer a trajetória completa →</a>
     </div>
   </div>
 </body>
