@@ -504,3 +504,43 @@
 
 </body>
 </html>
+<script>
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('oferta') !== 'isca') return;
+
+  var LINK_DESCONTO_39 = 'https://mpago.la/2vi5cWe';
+
+  document.querySelectorAll('a[href="https://mpago.la/25jiF3E"]').forEach(function(a){
+    a.href = LINK_DESCONTO_39;
+  });
+
+  var priceBadge = document.querySelector('.price-badge');
+  if (priceBadge) priceBadge.innerHTML = 'R$ 39<span class="cents">,90</span>';
+
+  var pricePart = document.querySelector('.price-part');
+  if (pricePart) pricePart.textContent = ' · R$ 39,90';
+
+  var price = document.querySelector('.pricing-card .price');
+  if (price) price.innerHTML = '<sup>R$</sup>39<span class="cents">,90</span>';
+
+  var priceNote = document.querySelector('.pricing-card .price-note');
+  if (priceNote) {
+    priceNote.insertAdjacentHTML('beforebegin',
+      '<div style="display:inline-block;background:#FFDF00;color:var(--ink);font-weight:700;font-size:12px;letter-spacing:.04em;padding:7px 16px;border-radius:999px;margin-bottom:12px;">🎁 Desconto exclusivo — você já garantiu a isca</div><br>'
+    );
+  }
+
+  var LINK_UPSELL_DOSSIE = 'https://mpago.la/2z9mgkz';
+  var btnPrimary = document.querySelector('.pricing-card .btn-primary');
+  if (btnPrimary) {
+    btnPrimary.insertAdjacentHTML('beforebegin',
+      '<div style="text-align:left;background:rgba(184,134,11,0.08);border:1px dashed var(--brass);border-radius:12px;padding:14px 16px;margin-bottom:16px;">' +
+        '<div style="font-family:\'IBM Plex Mono\',monospace;font-size:11px;letter-spacing:.08em;color:var(--brass);text-transform:uppercase;margin-bottom:6px;">🗳️ Oferta extra — pós-eleição</div>' +
+        '<p style="font-size:13.5px;line-height:1.5;color:var(--ink);margin:0 0 10px;">Depois do resultado do 2º turno (25/10), receba um dossiê com o <b>histórico político</b> e as <b>promessas de campanha</b> de cada candidato eleito — pra cobrar o que prometeram.</p>' +
+        '<a href="' + LINK_UPSELL_DOSSIE + '" style="font-size:13px;font-weight:700;color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--brass);">+ Adicionar dossiê pós-eleição · R$9,90 →</a>' +
+      '</div>'
+    );
+  }
+})();
+</script>
