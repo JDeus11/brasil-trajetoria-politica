@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dossiê Pós-Eleição — Brasil: Trajetória Política</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  section[id], header[id]{ scroll-margin-top: 88px; }
+  :root{
+    --ink:#0B2A5B;
+    --ink-soft:rgba(250,247,238,0.72);
+    --paper:#FAF7EC;
+    --paper-2:#FFFFFF;
+    --stamp:#0E8A43;
+    --brass:#B8860B;
+    --gold-bright:#FFDF00;
+    --line-on-paper:rgba(11,42,91,0.16);
+    --line-on-ink:rgba(250,247,238,0.24);
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:'IBM Plex Sans',sans-serif; -webkit-font-smoothing:antialiased; line-height:1.55; }
+  h1,h2,h3,.serif{ font-family:'Newsreader',serif; }
+  .mono{ font-family:'IBM Plex Mono',monospace; letter-spacing:.03em; }
+  a{ color:inherit; }
+  img,svg{ display:block; max-width:100%; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 28px; }
+
+  nav{ position:sticky; top:0; z-index:50; background:rgba(237,228,206,0.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--line-on-paper); }
+  nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:68px; gap:12px; }
+  .brandmark{ display:flex; align-items:center; gap:10px; font-family:'Newsreader',serif; font-weight:600; font-size:18px; white-space:nowrap; }
+  .navcta{ font-family:'IBM Plex Sans',sans-serif; font-weight:600; font-size:14px; background:var(--ink); color:var(--paper-2); padding:11px 20px; border-radius:999px; text-decoration:none; border:1px solid var(--ink); }
+  .navcta:hover{ background:transparent; color:var(--ink); }
+  @media (max-width:540px){ .brandmark{ font-size:14px; gap:7px; } .brandmark .flag-icon{ width:22px !important; } .navcta{ font-size:12.5px; padding:9px 13px; white-space:nowrap; } header.hero{ padding-top:56px; } }
+
+  header.hero{ padding:80px 0 88px; }
+  .case-tag{ display:inline-flex; align-items:center; font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:var(--brass); border:1px solid var(--brass); padding:6px 14px; border-radius:999px; letter-spacing:.06em; margin-bottom:26px; }
+  .hero h1{ font-size:clamp(32px,5vw,54px); font-weight:600; line-height:1.1; margin:0 0 22px; max-width:16ch; }
+  .hero .lede{ font-size:clamp(17px,1.7vw,19px); color:rgba(11,42,91,0.78); max-width:56ch; margin:0 0 34px; }
+  .hero-actions{ display:flex; align-items:center; gap:22px; flex-wrap:wrap; margin-bottom:16px;}
+  .btn-primary{ display:inline-block; background:var(--stamp); color:var(--paper-2); font-weight:600; font-size:16px; padding:16px 32px; text-decoration:none; border-radius:999px; border:1px solid var(--stamp); transition:transform .15s ease, box-shadow .15s ease; cursor:pointer; }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 10px 24px -8px rgba(14,138,67,0.55); }
+  .hero-sub{ font-size:14px; color:rgba(11,42,91,0.6); display:block; margin-top:4px; }
+  .price-badge{ font-weight:700; font-size:20px; color:var(--ink); background:var(--gold-bright); padding:10px 18px; border-radius:999px; border:1px solid var(--ink); }
+
+  .hero-grid{ display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:start; }
+  .stamp-card{ position:relative; background:var(--paper-2); border:1px solid var(--line-on-paper); border-radius:20px; padding:34px 30px; box-shadow:0 24px 48px -20px rgba(11,42,91,0.28); }
+  .stamp-card .mono{ font-size:11px; color:rgba(11,42,91,0.55); display:block; margin-bottom:14px; }
+  .stamp-card ul{ margin:0; padding:0; list-style:none; }
+  .stamp-card li{ font-size:15px; padding:10px 0; border-top:1px dashed var(--line-on-paper); display:flex; align-items:center; gap:10px; }
+  .stamp-card li:first-of-type{ border-top:none; }
+  .stamp-card li::before{ content:'✓'; color:var(--stamp); font-weight:700; }
+  @media (max-width:820px){ .hero-grid{ grid-template-columns:1fr; } .stamp-card{ margin-top:8px; } }
+
+  .section{ padding:80px 0; }
+  .section-head{ margin-bottom:48px; }
+  .section-head h2{ font-size:clamp(24px,3.2vw,34px); font-weight:600; margin:0 0 14px; max-width:20ch; }
+  .section-head p{ color:rgba(11,42,91,0.7); font-size:16px; max-width:56ch; }
+
+  .offer-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
+  @media (max-width:820px){ .offer-grid{ grid-template-columns:1fr; } }
+  .offer-card{ background:var(--paper-2); border:1px solid var(--line-on-paper); border-radius:18px; padding:28px 26px; box-shadow:0 16px 32px -22px rgba(11,42,91,0.22); }
+  .offer-card .kicker{ font-size:11px; color:var(--brass); margin-bottom:8px; display:inline-block; }
+  .offer-card h3{ font-size:19px; font-weight:600; margin:0 0 10px; }
+  .offer-card p{ color:rgba(11,42,91,0.72); font-size:14.5px; margin:0; }
+
+  .pricing-card{ max-width:460px; margin:0 auto; background:var(--paper-2); border:1px solid var(--ink); border-radius:24px; padding:42px 36px; text-align:center; box-shadow:0 26px 52px -22px rgba(11,42,91,0.3); }
+  .pricing-card .case-tag{ margin-bottom:18px; }
+  .price{ font-family:'Newsreader',serif; font-size:56px; font-weight:700; margin:4px 0 4px; color:var(--stamp); }
+  .price sup{ font-size:20px; top:-1.2em; position:relative; }
+  .price-note{ font-size:13px; color:rgba(11,42,91,0.55); margin-bottom:26px; }
+  .pricing-card ul{ list-style:none; padding:0; margin:0 0 28px; text-align:left; }
+  .pricing-card ul li{ font-size:14.5px; padding:9px 0; border-top:1px dashed var(--line-on-paper); }
+  .pricing-card ul li:first-child{ border-top:none; }
+  .pricing-card .btn-primary{ width:100%; text-align:center; border:1px solid var(--stamp); }
+  .email-field{ width:100%; padding:12px 14px; border:1px solid var(--line-on-paper); border-radius:8px; font-size:14px; margin-bottom:10px; box-sizing:border-box; font-family:inherit; }
+  .form-msg{ font-size:12px; margin-top:8px; min-height:14px; }
+  .guarantee-line{ font-size:13px; color:rgba(11,42,91,0.65); margin-top:16px; }
+
+  details{ border-top:1px solid var(--line-on-paper); padding:18px 0; }
+  details:last-of-type{ border-bottom:1px solid var(--line-on-paper); }
+  summary{ cursor:pointer; font-weight:600; font-size:15.5px; list-style:none; display:flex; justify-content:space-between; gap:16px; }
+  summary::-webkit-details-marker{ display:none; }
+  summary::after{ content:'+'; font-family:'IBM Plex Mono',monospace; color:var(--brass); font-size:20px; flex:none; }
+  details[open] summary::after{ content:'–'; }
+  details p{ margin:12px 0 0; font-size:14.5px; color:rgba(11,42,91,0.72); max-width:62ch; }
+
+  footer{ background:var(--ink); color:var(--ink-soft); padding:56px 0 36px; }
+  footer .foot-top{ display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:24px; margin-bottom:32px; }
+  footer .brandmark{ color:var(--paper-2); }
+  footer .fineprint{ font-size:12.5px; border-top:1px solid var(--line-on-ink); padding-top:22px; }
+  footer .fineprint a{ text-decoration:underline; }
+
+  .flag-rule{ height:4px; display:flex; width:100%; }
+  .flag-rule span{ flex:1; }
+  .flag-rule .g{ background:#0E8A43; }
+  .flag-rule .y{ background:#FFDF00; }
+  .flag-rule .b{ background:#0B2A5B; }
+  .flag-icon{ display:inline-block; border-radius:6px; overflow:hidden; flex:none; }
+  .hero-flag{ display:block; width:48px; height:auto; margin-bottom:18px; border-radius:8px; box-shadow:0 10px 20px -8px rgba(11,42,91,0.35); }
+</style>
+</head>
+<body>
+<svg style="display:none">
+  <symbol id="flag-br" viewBox="0 0 700 490">
+    <rect width="700" height="490" fill="#0E8A43"/>
+    <polygon points="350,38 662,245 350,452 38,245" fill="#FFDF00"/>
+    <circle cx="350" cy="245" r="132" fill="#0B2A5B"/>
+    <path d="M 205 305 A 260 260 0 0 1 495 185" stroke="#FFFFFF" stroke-width="30" fill="none"/>
+    <g fill="#FFFFFF">
+      <circle cx="300" cy="150" r="4.5"/><circle cx="335" cy="142" r="3"/><circle cx="368" cy="148" r="5"/>
+      <circle cx="270" cy="175" r="3"/><circle cx="400" cy="170" r="3.5"/><circle cx="425" cy="200" r="4"/>
+      <circle cx="255" cy="215" r="3"/><circle cx="245" cy="255" r="4"/><circle cx="260" cy="290" r="3"/>
+      <circle cx="440" cy="240" r="3"/><circle cx="435" cy="280" r="4.5"/><circle cx="410" cy="315" r="3"/>
+      <circle cx="320" cy="330" r="4"/><circle cx="355" cy="335" r="3"/><circle cx="290" cy="320" r="3"/>
+      <circle cx="380" cy="235" r="3"/><circle cx="350" cy="205" r="3.5"/><circle cx="310" cy="240" r="3"/>
+    </g>
+  </symbol>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <div class="brandmark"><svg class="flag-icon" style="width:30px;height:auto;" viewBox="0 0 700 490"><use href="#flag-br"/></svg>Brasil: Trajetória Política</div>
+    <a class="navcta" href="index.html">Ver o livro completo</a>
+  </div>
+</nav>
+<div class="flag-rule"><span class="g"></span><span class="y"></span><span class="b"></span></div>
+
+<header class="hero">
+  <div class="wrap">
+    <svg class="flag-icon hero-flag" viewBox="0 0 700 490"><use href="#flag-br"/></svg>
+    <span class="case-tag mono"><svg class="flag-icon" style="width:16px;height:auto;margin-right:7px;" viewBox="0 0 700 490"><use href="#flag-br"/></svg>DOSSIÊ PÓS-ELEIÇÃO · 2026</span>
+    <div class="hero-grid">
+      <div>
+        <h1>O resultado saiu. Agora, cobre o que foi prometido.</h1>
+        <p class="lede">O histórico político e as promessas de campanha de cada candidato eleito em 2026, lado a lado — pra comparar o que disseram com o que fizeram, sem escolher lado.</p>
+        <div class="hero-actions">
+          <span class="price-badge mono">R$ 9<span class="cents">,90</span></span>
+        </div>
+        <span class="hero-sub">Pré-venda · você garante agora, recebe por e-mail assim que o resultado do 2º turno (25/10) for confirmado</span>
+      </div>
+      <div class="stamp-card">
+        <span class="mono">CONTEÚDO DO DOSSIÊ</span>
+        <ul>
+          <li>Histórico político de cada eleito</li>
+          <li>Promessas de campanha, uma a uma</li>
+          <li>As duas leituras dos temas que mais dividiram a campanha</li>
+          <li>Envio automático por e-mail após o resultado</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head" style="text-align:center;max-width:640px;margin:0 auto 40px;">
+      <h2 style="max-width:none;">O que entra no dossiê</h2>
+      <p style="margin:0 auto;">Três frentes, no mesmo tom sem viés do resto do conteúdo.</p>
+    </div>
+    <div class="offer-grid">
+      <div class="offer-card">
+        <span class="kicker mono">01</span>
+        <h3>Trajetória de cada eleito</h3>
+        <p>Partido, cargos anteriores e mudanças de posição ao longo da carreira — o histórico que explica quem chegou ao poder.</p>
+      </div>
+      <div class="offer-card">
+        <span class="kicker mono">02</span>
+        <h3>Promessas de campanha</h3>
+        <p>O que cada eleito prometeu, prazo e viabilidade — pra você cobrar depois com informação, não com achismo.</p>
+      </div>
+      <div class="offer-card">
+        <span class="kicker mono">03</span>
+        <h3>As duas leituras</h3>
+        <p>Os temas que mais dividiram a campanha de 2026, apresentados com o mesmo peso dos dois lados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap" style="display:flex; flex-direction:column; align-items:center;">
+    <div class="pricing-card">
+      <span class="case-tag mono">DOSSIÊ PÓS-ELEIÇÃO</span>
+      <div class="price"><sup>R$</sup>9<span class="cents">,90</span></div>
+      <div class="price-note">pagamento único · entrega após o resultado</div>
+      <ul>
+        <li>Histórico político de cada eleito</li>
+        <li>Promessas de campanha, uma a uma</li>
+        <li>As duas leituras dos temas da campanha</li>
+        <li>Enviado por e-mail assim que ficar pronto</li>
+      </ul>
+      <input type="email" id="dossie-email" class="email-field" placeholder="seu@email.com" required>
+      <button type="button" id="dossie-btn" class="btn-primary">Quero o dossiê →</button>
+      <div id="dossie-msg" class="form-msg"></div>
+      <div class="guarantee-line">🛈 Compra 100% protegida · garantia incondicional de 7 dias</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="case-tag mono">PERGUNTAS FREQUENTES</span>
+      <h2 style="max-width:none;">Antes de decidir</h2>
+    </div>
+    <div style="max-width:760px;">
+      <details open>
+        <summary>Quando eu recebo o dossiê?</summary>
+        <p>Assim que o resultado do 2º turno for confirmado (25/10), o material é enviado automaticamente pro e-mail cadastrado na compra.</p>
+      </details>
+      <details>
+        <summary>Preciso ter comprado o livro "Brasil: Trajetória Política"?</summary>
+        <p>Não — o dossiê funciona separado. Mas se você ainda não tem o pacote completo, ele complementa bem: 200 anos de contexto histórico + o dossiê sobre quem foi eleito agora.</p>
+      </details>
+      <details>
+        <summary>E se eu não gostar do conteúdo?</summary>
+        <p>Mesma garantia do restante do conteúdo: 7 dias, devolução de 100% do valor, sem perguntas.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="flag-rule"><span class="g"></span><span class="y"></span><span class="b"></span></div>
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="brandmark"><svg class="flag-icon" style="width:30px;height:auto;" viewBox="0 0 700 490"><use href="#flag-br"/></svg>Brasil: Trajetória Política</div>
+      <a class="navcta" href="index.html" style="background:transparent;border-color:var(--paper-2);color:var(--paper-2);">Ver o livro completo</a>
+    </div>
+    <div class="fineprint">Conteúdo educacional e histórico, sem vínculo com partido político. © 2026. · <a href="index.html">Pacote completo →</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var LINK_UPSELL_DOSSIE = 'https://mpago.la/2z9mgkz';
+  var WEBHOOK_CAPTURA_EMAIL = 'https://hook.eu2.make.com/jctpkjn3e51v4k95en2e1s9p4w553u5d';
+  var btn = document.getElementById('dossie-btn');
+  var emailInput = document.getElementById('dossie-email');
+  var msg = document.getElementById('dossie-msg');
+  if (!btn) return;
+  btn.addEventListener('click', function(){
+    var email = (emailInput.value || '').trim();
+    if (!email || email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+      msg.textContent = 'Digite um e-mail válido.';
+      msg.style.color = '#B00020';
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+    fetch(WEBHOOK_CAPTURA_EMAIL, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ email: email, produto: 'dossie-pos-eleicao', origem: 'pagina-dossie-separada' })
+    }).then(function(){
+      window.location.href = LINK_UPSELL_DOSSIE;
+    }).catch(function(){
+      window.location.href = LINK_UPSELL_DOSSIE;
+    });
+  });
+})();
+</script>
+</body>
+</html>
